@@ -7,39 +7,25 @@ using namespace std;
 
 int main()
 {
-    pair<string,string> num;
-    cin >> num.first >> num.second;
-    size_t len_f = num.first.size() -1;
-    size_t len_s = num.second.size() -1;
-    string sum;
-    bool plus = false;
-    int one_sum;
-    for(int i = len_f, j = len_s; i >= 0 || j >= 0 ; i--, j--)
-    {
-        one_sum = ((int)num.first[i] - '0') + ((int)num.second[j] - '0');
-        if(plus) one_sum++;
-        if(one_sum >= 10)
-        {
-            sum += to_string(one_sum - 10);
-            plus = true;
-        }
-        else
-        {
-            sum += to_string(one_sum);
-            plus = false;
-        }
-        if(i > 0 && j == 0)
-        {
-            num.second[j] = '0';
-            j++;
-        }
-        if(j > 0 && i == 0)
-        {
-            num.first[i] = '0';
-            i++;
-        }
-    }
-    reverse(sum.begin(),sum.end());
-    cout << sum << endl;
+    string a, b;
+    cin >> a >> b;
 
+    int carry = 0;
+    int i = (int)a.size() - 1;
+    int j = (int)b.size() - 1;
+    string sum;
+    sum.reserve(max(a.size(), b.size()) + 1);
+
+    while (i >= 0 || j >= 0 || carry)
+    {
+        int s = carry;
+        if (i >= 0) s += a[i--] - '0';
+        if (j >= 0) s += b[j--] - '0';
+        sum.push_back('0' + (s % 10));
+        carry = s / 10;
+    }
+
+    reverse(sum.begin(), sum.end());
+    cout << sum << endl;
+    return 0;
 }
