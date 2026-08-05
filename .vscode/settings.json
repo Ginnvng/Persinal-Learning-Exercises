@@ -1,0 +1,40 @@
+{
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Microsoft, BreakBeforeBraces: Allman, IndentWidth: 4 }",
+    "editor.formatOnSave": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    }
+    {
+        // 缩进：4个空格
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        // 保存时自动格式化
+        "editor.formatOnSave": true,
+        // C 语言特定设置
+        "[c]": {
+            "editor.defaultFormatter": "ms-vscode.cpptools"
+        },
+        // C/C++ 扩展的格式化选项
+        "C_Cpp.formatting": "vcFormat",
+        "C_Cpp.vcFormat.indent.braces": false,
+        "C_Cpp.vcFormat.indent.caseLabels": true,
+        "C_Cpp.vcFormat.indent.caseContents": true,
+        "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "newLine",
+        "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "newLine",
+        "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "newLine",
+        "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "newLine",
+        "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "newLine",
+        "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyFunction": false,
+        "C_Cpp.vcFormat.newLine.closeBraceSameLine.emptyType": false,
+        "C_Cpp.vcFormat.space.beforeFunctionOpenParenthesis": "remove",
+        "C_Cpp.vcFormat.space.aroundAssignmentOperator": "insert",
+        "C_Cpp.vcFormat.space.afterCastCloseParenthesis": false,
+        "C_Cpp.vcFormat.pointerAlignment": "right",
+        "C_Cpp.vcFormat.wrap.preserveBlocks": "allOneLineScopes"
+    }
+}
