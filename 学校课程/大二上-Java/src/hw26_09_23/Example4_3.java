@@ -13,7 +13,7 @@ public class Example4_3 {
         carThree = carTwo;
         System.out.println("carOne目前的速度：" + carOne.getSpeed());
         System.out.println("carTwo目前的速度：" + carTwo.getSpeed());
-        System.out.println("carThree目前的速度：" + carOne.getSpeed());
+        System.out.println("carThree目前的速度：" + carThree.getSpeed());
         carOne = null;
         System.out.println("carOne目前的速度：" + carOne.getSpeed());
     }
