@@ -1,0 +1,14 @@
+package hw26_10_28;
+
+public class Card {
+    String title;
+    Card() {
+        title = "新年快乐!";
+    }
+    Card(String title) {
+        this.title = title;
+    }
+    public String getTitle() {
+        return title;
+    }
+}
